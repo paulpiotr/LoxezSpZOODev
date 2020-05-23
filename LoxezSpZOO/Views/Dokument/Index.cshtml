@@ -1,0 +1,54 @@
+﻿@model IEnumerable<LoxezSpZOOContext.Models.Dokument>
+@{
+    ViewData["Title"] = "Lista dokumentów";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Lista dokumentów</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Identyfikator)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Typ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tytul)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NazwaPliku)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUtworzenia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Identyfikator)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Typ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tytul)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NazwaPliku)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataUtworzenia)
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Usuń</a>
+                    <a asp-action="PdfAsync" asp-route-id="@item.Id" class="btn btn-success">Pobierz</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

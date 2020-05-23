@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnryptDecrypt", "EnryptDecrypt\EnryptDecrypt.csproj", "{FE17121A-C86D-492D-9FB8-227E10B311EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnryptDecryptForm", "EnryptDecryptForm\EnryptDecryptForm.csproj", "{DB45A1F7-DC31-409D-97C1-BCD66A28067F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{77903D36-B1F4-4FD6-8F66-254E7F26E8F0}"
+	ProjectSection(SolutionItems) = preProject
+		log4net.config = log4net.config
+		public.rsa = public.rsa
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoxezSpZOO", "LoxezSpZOO\LoxezSpZOO.csproj", "{AD69CE85-A801-4682-9A1A-27D31A116669}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoxezSpZOOContext", "LoxezSpZOOContext\LoxezSpZOOContext.csproj", "{5BEB78D4-7905-456D-9CE8-37551FF14C05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GtContext", "GtContext\GtContext.csproj", "{DA30B5C0-30B6-4BF5-BF27-89413269934E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoxezSpZOODokumenty", "LoxezSpZOODokumenty\LoxezSpZOODokumenty.csproj", "{25DCD3BB-12EA-4026-8B33-FE8E1EA6AFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE17121A-C86D-492D-9FB8-227E10B311EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE17121A-C86D-492D-9FB8-227E10B311EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE17121A-C86D-492D-9FB8-227E10B311EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE17121A-C86D-492D-9FB8-227E10B311EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB45A1F7-DC31-409D-97C1-BCD66A28067F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB45A1F7-DC31-409D-97C1-BCD66A28067F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB45A1F7-DC31-409D-97C1-BCD66A28067F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB45A1F7-DC31-409D-97C1-BCD66A28067F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD69CE85-A801-4682-9A1A-27D31A116669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD69CE85-A801-4682-9A1A-27D31A116669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD69CE85-A801-4682-9A1A-27D31A116669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD69CE85-A801-4682-9A1A-27D31A116669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BEB78D4-7905-456D-9CE8-37551FF14C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BEB78D4-7905-456D-9CE8-37551FF14C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BEB78D4-7905-456D-9CE8-37551FF14C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BEB78D4-7905-456D-9CE8-37551FF14C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA30B5C0-30B6-4BF5-BF27-89413269934E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA30B5C0-30B6-4BF5-BF27-89413269934E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA30B5C0-30B6-4BF5-BF27-89413269934E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA30B5C0-30B6-4BF5-BF27-89413269934E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25DCD3BB-12EA-4026-8B33-FE8E1EA6AFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DCD3BB-12EA-4026-8B33-FE8E1EA6AFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DCD3BB-12EA-4026-8B33-FE8E1EA6AFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DCD3BB-12EA-4026-8B33-FE8E1EA6AFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69A5CA87-800B-44CC-9BA5-A42B8755D871}
+	EndGlobalSection
+EndGlobal

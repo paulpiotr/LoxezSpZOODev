@@ -1,0 +1,72 @@
+﻿@model IEnumerable<LoxezSpZOOContext.Models.KoszykElement>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    decimal sum = 0;
+}
+<h1>Pobierz Koszyk</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TwTowarTwId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ilosc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cena)
+            </th>
+            <th>
+                @Html.Raw("Wartość")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataUtworzenia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TwTowarTwId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ilosc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cena)
+                </td>
+                <th>
+                    @Html.Raw(string.Format("{0:c}", (item.Ilosc * item.Cena)))
+                    @{sum = sum + (item.Ilosc * item.Cena);}
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataUtworzenia)
+                </td>
+                <td>
+                    <a class="btn btn-danger float-right" asp-action="UsunZKoszyka" asp-route-id="@item.Id">Usuń z koszyka</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4"><a class="btn btn-success float-left" asp-controller="VwTowar" asp-action="Index">Lista towarów</a></td>
+            <th>
+                @Html.Raw(string.Format("{0:c}", sum))
+            </th>
+            <td colspan="2"><a class="btn btn-success float-right" asp-action="PrzeliczKoszykWartosc">Przelicz koszyk</a></td>
+        </tr>
+    </tfoot>
+</table>

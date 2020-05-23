@@ -1,0 +1,786 @@
+﻿@model IEnumerable<GtContext.Models.VwTowar>
+
+@{
+    ViewData["Title"] = "Lista towarów";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Lista towarów</h1>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.TwZablokowany)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwRodzaj)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.TwSymbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwNazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TcCenaNetto1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TcCenaBrutto1)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.StTowId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StMagId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StStan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rezerwacja)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dostepne)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StStanMin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwStanMin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwJednMiary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwOpis)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwIdVatSp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwIdVatZak)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VatSymbol)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwJakPrzySp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPkwiU)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwSww)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPlu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwIdRabat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwIdOpakowanie)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPrzezWartosc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwIdPodstDostawca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dostawca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwDostSymbol)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwCzasDostawy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwUrzNazwa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPodstKodKresk)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwIdTypKodu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwCenaOtwarta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwWagaEtykiet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwDniWaznosc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwIdGrupa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwUwagi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwWww)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwSklepInternet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwCharakter)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwLogo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwSerwisAukcyjny)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto7)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto8)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto9)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto10)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto7)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto8)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto9)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaBrutto10)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdTowar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk7)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk8)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk9)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcZysk10)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut7)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut8)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut9)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcNarzut10)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza7)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza8)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza9)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcMarza10)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta7)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta8)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta9)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcIdWaluta10)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNetto0)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcWalutaId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcWalutaKurs)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcPodstawaKc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcCenaNettoWaluta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TcWalutaJedn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole7)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwPole8)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwSprzedazMobilna)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwWysokosc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwSzerokosc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwGlebokosc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwStanMaks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwObrotMarza)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwOdwrotneObciazenie)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwMechanizmPodzielonejPlatnosci)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TwKodTowaru)
+                </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.TwZablokowany)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwRodzaj)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.TwSymbol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TwNazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TcCenaNetto1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TcCenaBrutto1)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.StTowId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StMagId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StStan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Stan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rezerwacja)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dostepne)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StStanMin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwStanMin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwJednMiary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwOpis)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwIdVatSp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwIdVatZak)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VatSymbol)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwJakPrzySp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPkwiU)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwSww)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPlu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwIdRabat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwIdOpakowanie)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPrzezWartosc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwIdPodstDostawca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dostawca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwDostSymbol)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwCzasDostawy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwUrzNazwa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPodstKodKresk)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwIdTypKodu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwCenaOtwarta)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwWagaEtykiet)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwDniWaznosc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwIdGrupa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwUwagi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwWww)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwSklepInternet)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwCharakter)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwLogo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwSerwisAukcyjny)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto7)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto8)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto9)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto10)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto7)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto8)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto9)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaBrutto10)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdTowar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk7)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk8)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk9)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcZysk10)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut7)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut8)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut9)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcNarzut10)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza7)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza8)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza9)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcMarza10)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta7)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta8)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta9)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcIdWaluta10)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNetto0)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcWalutaId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcWalutaKurs)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcPodstawaKc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcCenaNettoWaluta)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TcWalutaJedn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole7)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwPole8)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwSprzedazMobilna)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwWysokosc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwSzerokosc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwGlebokosc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwStanMaks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwObrotMarza)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwOdwrotneObciazenie)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwMechanizmPodzielonejPlatnosci)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TwKodTowaru)
+                    </td>*@
+                <td>
+                    @await Component.InvokeAsync("KoszykElementDodaj", new { nazwa = item.TwNazwa, ilosc = (decimal)0, cena = item.TcCenaBrutto1, twTowarTwId = item.TwId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿@model LoxezSpZOOContext.Models.KoszykElement
+@if (null != Model)
+{
+<form asp-controller="KoszykElement" asp-action="DodajDoKoszyka">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="KoszykNaglowekId" class="form-control d-none" type="hidden" />
+    <input asp-for="Nazwa" class="form-control d-none" type="hidden" />
+    <input asp-for="Cena" class="form-control d-none" type="hidden" />
+    <input asp-for="TwTowarTwId" class="form-control" type="hidden" />
+    <div class="input-group">
+        <input asp-for="Ilosc" class="form-control" />
+        <div class="input-group-append">
+            <input type="submit" value="Dodaj do koszyka" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+@section ScriptsInline {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert("redy");
+        });
+    </script>
+}
+}
+else
+{
+<span class="text-danger">Nie można dodać tego produktu do koszyka :(</span>
+}

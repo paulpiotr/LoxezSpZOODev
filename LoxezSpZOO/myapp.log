@@ -1,0 +1,10 @@
+2020-05-08 12:54:38,110 [1] INFO Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-05-08 12:54:38,123 [1] INFO Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2020-05-08 12:54:38,124 [1] INFO Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-05-08 12:54:38,125 [1] INFO Microsoft.Hosting.Lifetime - Hosting environment: Development
+2020-05-08 12:54:38,126 [1] INFO Microsoft.Hosting.Lifetime - Content root path: C:\Praca\WebAppCoreWebConDev\WebAppCoreWebCon
+2020-05-08 12:54:38,126 [1] INFO Microsoft.Hosting.Lifetime - Content root path: C:\Praca\WebAppCoreWebConDev\WebAppCoreWebCon
+2020-05-08 12:54:38,142 [4] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-05-08 12:54:38,142 [4] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2020-05-08 12:57:52,494 [6] INFO Microsoft.Hosting.Lifetime - Application is shutting down...
+2020-05-08 12:57:52,494 [6] INFO Microsoft.Hosting.Lifetime - Application is shutting down...
