@@ -45,7 +45,7 @@ namespace LoxezSpZOODokument
                                 string nazwaPliku = Regex.Replace(suDokument.Identyfikator.ToString() + "_" + suDokument.NumerPelny.ToString() + "_" + suDokument.Typ.ToString() + "_" + suDokument.Tytul.ToString() + "_" + suDokument.Numer.ToString(), "[^a-zA-Z0-9]", "_");
                                 path = Path.Combine(path + nazwaPliku + ".pdf");
                                 string toBase64String = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(File.ReadAllText(path)));
-                                if (SprawdzCzyDokumentIsnieje("http://localhost:8097/api/DokumentApi/znajdz?identyfikator=" + suDokument.Identyfikator.ToString()) != HttpStatusCode.OK)
+                                if (SprawdzCzyDokumentIsnieje(ConfigurationManager.AppSettings["ApiUrl"] + @"/znajdz?identyfikator=" + suDokument.Identyfikator.ToString()) != HttpStatusCode.OK)
                                 {
                                     Console.WriteLine("Dodaję dokument " + nazwaPliku + " zapis do " + path);
                                     suDokument.DrukujDoPliku(path, TypPlikuEnum.gtaTypPlikuPDF);
@@ -65,7 +65,7 @@ namespace LoxezSpZOODokument
                                         NazwaPliku = nazwaPliku,
                                         Tresc = tresc
                                     };
-                                    Console.WriteLine("Zapisuję do bazy " + DodajDokument("http://localhost:8097/api/DokumentApi", dokument));
+                                    Console.WriteLine("Zapisuję do bazy " + DodajDokument(ConfigurationManager.AppSettings["ApiUrl"], dokument));
                                 }
                             }
                         }
